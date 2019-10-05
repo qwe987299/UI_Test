@@ -12,7 +12,7 @@ public class DisplayString extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
-        String outputString = intent.getStringExtra("userInputString");
+        String outputString = intent.getStringExtra("userInputString").toUpperCase();
         setContentView(R.layout.layout_display_string);
         TextView showStringTV = (TextView) findViewById(R.id.showString);
         showStringTV.setText(outputString);
